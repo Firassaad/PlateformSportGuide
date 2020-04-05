@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.FXML_menuController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="-1.0" layoutY="1.0" opacity="0.91" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/menu.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_prog" layoutX="54.0" layoutY="78.0" mnemonicParsing="false" onAction="#onclick_bnt_prog" text="Gestion de Programme" />
+      <Button fx:id="btn_ex" layoutX="392.0" layoutY="78.0" mnemonicParsing="false" onAction="#on_click_btn_ex" prefHeight="31.0" prefWidth="174.0" text="Gestion d'exercice" />
+   </children>
+</AnchorPane>

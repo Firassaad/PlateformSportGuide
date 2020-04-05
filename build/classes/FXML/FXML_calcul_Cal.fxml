@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.FXML_calcul_CalController">
+   <children>
+      <Label layoutX="128.0" layoutY="32.0" text="le nombre de calories qu'il nous faut par jour ?" />
+      <CheckBox fx:id="check_h" layoutX="142.0" layoutY="103.0" mnemonicParsing="false" text="HOMME" />
+      <CheckBox fx:id="check_f" layoutX="262.0" layoutY="103.0" mnemonicParsing="false" text="FEMME" />
+      <TextField fx:id="txt_poids" layoutX="85.0" layoutY="149.0" />
+      <TextField fx:id="text_taille" layoutX="381.0" layoutY="149.0" />
+      <TextField fx:id="text_age" layoutX="85.0" layoutY="225.0" />
+      <Label layoutX="14.0" layoutY="154.0" text="Poids (Kg)" />
+      <Label layoutX="309.0" layoutY="154.0" text="Taille (Cm)" />
+      <Label layoutX="26.0" layoutY="231.0" text="Age" />
+      <Button layoutX="418.0" layoutY="225.0" mnemonicParsing="false" onAction="#OnCalcul_calories" text="Calculer" />
+      <Label fx:id="label_result" layoutX="181.0" layoutY="325.0" prefHeight="21.0" prefWidth="199.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

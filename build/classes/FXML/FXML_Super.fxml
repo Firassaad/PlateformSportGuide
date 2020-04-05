@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="906.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.FXML_SuperController">
+   <children>
+      <TableView fx:id="tabViewuser" layoutX="14.0" layoutY="275.0" onMousePressed="#mousePressed" prefHeight="200.0" prefWidth="867.0">
+        <columns>
+          <TableColumn fx:id="colNomPrenom" prefWidth="238.0" text="Nom &amp; prenom" />
+          <TableColumn fx:id="colLogin" prefWidth="145.0" text="Login" />
+            <TableColumn fx:id="colEmail" prefWidth="210.0" text="Email" />
+            <TableColumn fx:id="colTlp" prefWidth="171.0" text="Téléphone" />
+            <TableColumn fx:id="colRole" prefWidth="102.0" text="Role" />
+        </columns>
+      </TableView>
+      <Label fx:id="label_nomprenom" layoutX="32.0" layoutY="101.0" prefHeight="21.0" prefWidth="150.0" />
+      <Label fx:id="label_email" layoutX="191.0" layoutY="101.0" prefHeight="21.0" prefWidth="150.0" />
+      <Label fx:id="label_tlp" layoutX="368.0" layoutY="101.0" prefHeight="21.0" prefWidth="150.0" />
+      <ComboBox fx:id="ComboRole" layoutX="542.0" layoutY="96.0" prefWidth="150.0" />
+      <Label layoutX="258.0" layoutY="26.0" text="Super Administrateur">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="attribuerRoleBtn" layoutX="578.0" layoutY="177.0" mnemonicParsing="false" onAction="#OnClick_attribuerRoleBtn" text="Attribuer Role" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="achor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.FXML_loginController">
+   <children>
+      <ImageView fx:id="imageview" fitHeight="634.0" fitWidth="943.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/muscu.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="username_text" layoutX="126.0" layoutY="289.0" />
+      <PasswordField fx:id="mdp_text" layoutX="125.0" layoutY="379.0" />
+      <Button fx:id="loginButton" layoutX="163.0" layoutY="454.0" mnemonicParsing="false" onAction="#OnLoginButton" prefHeight="31.0" prefWidth="113.0" text="Login" />
+      <Label layoutX="118.0" layoutY="244.0" prefHeight="36.0" prefWidth="203.0" text="Nom utilisateur" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="335.0" text="Mot de passe" textFill="#f5f5f5">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="53.0" text="Espace d'authentification" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="37.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

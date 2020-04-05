@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="781.0" prefWidth="1605.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.FXMLAdminController">
+   <children>
+      <Separator layoutX="604.0" layoutY="64.0" orientation="VERTICAL" prefHeight="714.0" prefWidth="14.0" />
+      <Label layoutX="145.0" layoutY="48.0" text="Gestion de programme" />
+      <Label layoutX="704.0" layoutY="115.0" text="Libellé" />
+      <Label layoutX="14.0" layoutY="188.0" prefHeight="17.0" prefWidth="135.0" text="Répetition par semaine" />
+      <Label layoutX="870.0" layoutY="48.0" text="Gestion d'exercice" />
+      <Label layoutX="700.0" layoutY="234.0" text="Gestion de programme" />
+      <TextField fx:id="text_libellé_prog" layoutX="173.0" layoutY="110.0" />
+      <TextField fx:id="text_rep_debutant" layoutX="278.0" layoutY="184.0" />
+      <TextField fx:id="text_libellé_exercice" layoutX="858.0" layoutY="109.0" />
+      <TextField fx:id="rep_debutant_txt" layoutX="1028.0" layoutY="223.0" prefHeight="25.0" prefWidth="49.0" />
+      <Label layoutX="173.0" layoutY="190.0" prefHeight="17.0" prefWidth="97.0" text="Débutant" />
+      <Label layoutX="105.0" layoutY="224.0" prefHeight="21.0" prefWidth="248.0" text="Intermediaire">
+         <graphic>
+            <Label prefHeight="17.0" prefWidth="62.0" />
+         </graphic></Label>
+      <Label layoutX="173.0" layoutY="255.0" prefHeight="17.0" prefWidth="97.0" text="Expert" />
+      <TextField fx:id="text_rep_intermediaire" layoutX="278.0" layoutY="219.0" />
+      <TextField fx:id="text_rep_expert" layoutX="278.0" layoutY="250.0" />
+      <Separator layoutX="12.0" layoutY="405.0" prefHeight="3.0" prefWidth="586.0" />
+      <Button fx:id="button_ajout" layoutX="353.0" layoutY="295.0" mnemonicParsing="false" onAction="#onclick_button_ajout" text="Ajouter" />
+      <TableView fx:id="tableViewProg" layoutY="424.0" prefHeight="200.0" prefWidth="604.0">
+        <columns>
+          <TableColumn fx:id="col_libellé" prefWidth="98.0" text="Programme" />
+          <TableColumn fx:id="col_deb" prefWidth="156.0" text="Répetition debutant" />
+            <TableColumn fx:id="col_int" prefWidth="191.0" text="Répetition intermediaire" />
+            <TableColumn fx:id="col_exp" prefWidth="158.0" text="Répetition expert" />
+        </columns>
+      </TableView>
+      <Label layoutX="708.0" layoutY="178.0" text="Programme" />
+      <ComboBox fx:id="prog_combo" layoutX="864.0" layoutY="172.0" onAction="#CHOOSE" prefHeight="25.0" prefWidth="97.0" />
+      <TextField fx:id="rep_intermidiare_txt" layoutX="1028.0" layoutY="261.0" prefHeight="25.0" prefWidth="49.0" />
+      <TextField fx:id="rep_expert_txt" layoutX="1028.0" layoutY="297.0" prefHeight="25.0" prefWidth="49.0" />
+      <Label layoutX="882.0" layoutY="234.0" prefHeight="17.0" prefWidth="97.0" text="Débutant" />
+      <Label layoutX="882.0" layoutY="266.0" prefHeight="17.0" prefWidth="97.0" text="Intermediaire" />
+      <Label layoutX="882.0" layoutY="300.0" prefHeight="17.0" prefWidth="97.0" text="Expert" />
+      <Button fx:id="add_ex" layoutX="1146.0" layoutY="375.0" mnemonicParsing="false" onAction="#On_add_ex" text="Ajouter" />
+      <TableView fx:id="tableViewEx" layoutX="614.0" layoutY="424.0" onMousePressed="#OnChooseEx" prefHeight="200.0" prefWidth="675.0">
+        <columns>
+          <TableColumn fx:id="col_libellé1" prefWidth="67.0" text="Exercice" />
+          <TableColumn fx:id="col_prog1" prefWidth="97.0" text="programme" />
+            <TableColumn fx:id="col_deb1" prefWidth="172.0" text="Répetition debutant" />
+            <TableColumn fx:id="col_int1" prefWidth="183.0" text="Répetition intermediaire" />
+            <TableColumn fx:id="col_expert1" prefWidth="155.0" text="Répetition expert" />
+        </columns>
+      </TableView>
+      <Separator layoutX="632.0" layoutY="406.0" prefHeight="3.0" prefWidth="703.0" />
+      <Label layoutX="503.0" layoutY="14.0" prefHeight="34.0" prefWidth="231.0" text="Espace Administrateur" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      
+            <Button fx:id="button_Logout" layoutX="838.0" layoutY="9.0" mnemonicParsing="false" onAction="#OnButtonLogout" text="Logout" />
+      <MediaView fx:id="mediaview" fitHeight="200.0" fitWidth="200.0" layoutX="1265.0" layoutY="176.0" />
+      <Label layoutX="882.0" layoutY="338.0" prefHeight="17.0" prefWidth="97.0" text="video" />
+      <Button fx:id="chooseVideo" layoutX="1010.0" layoutY="344.0" mnemonicParsing="false" onAction="#onClickChooseVid" text="choisir video" />
+      <Label fx:id="label_path" layoutX="1146.0" layoutY="349.0" prefHeight="21.0" prefWidth="369.0" text="String video" />
+      <Button fx:id="test_Buton" layoutX="1257.0" layoutY="375.0" mnemonicParsing="false" onAction="#ontest" text="Button" />
+
+   </children>
+</AnchorPane>
